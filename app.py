@@ -17,7 +17,7 @@ def menu_principal():
     Message.title("MAIN MENU",False)
     Message.line()
     print("[1] - EXAMS")
-    print("[2] - HELP \n")
+    print("[2] - HELP")
     print("")
     return input("Option: ")
     
