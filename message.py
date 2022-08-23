@@ -4,7 +4,7 @@ from emoticons import Emoticons
 
 
 sizeline = 60
-
+sizeline2 = 62
 
 class Message:
 
@@ -30,21 +30,33 @@ class Message:
         print(f"{Styles.UNDERLINE}{text}{Styles.ENDC}")
 
     def line(color=""):
-        line = "\u2500"*sizeline
+        line = "\u2500"*sizeline2
         Colors.print_color(color, line)
 
     def line_dotted(color=""):
-        line = "\u2212"*sizeline
+        line = "\u2212"*sizeline2
         Colors.print_color(color, line)
 
     def line_equal(color=""):
-        line = "="*sizeline
+        line = "="*sizeline2
+        Colors.print_color(color, line)
+
+    def line_asterisk(color=""):
+        line = "*"*sizeline2
+        Colors.print_color(color, line)
+    
+    def line_arrows(color=""):
+        line = "<"*int((sizeline2/2)-2) + " FIM " + ">"*int((sizeline2/2)-3)
         Colors.print_color(color, line)
 
 
-    def title(text):
-        Message.bold(f"|" + " "*((int(sizeline/2)-int(len(text)/2))-1) +
+    def title(text, bar = True):
+        if bar == True:
+            Message.bold(f"|" + " "*((int(sizeline/2)-int(len(text)/2))-1) +
                      text + " "*((int(sizeline/2)-int(len(text)/2))-1) + "|")
+        else:
+            Message.bold(f" "*((int(sizeline/2)-int(len(text)/2))-1) +
+                     text + " "*((int(sizeline/2)-int(len(text)/2))-1))
 
     def show_examples():
         Message.line()
