@@ -1,6 +1,7 @@
 
 from message import Message
 from colors import Colors
+from study.words_reserved import *
 
 
 def header():
@@ -35,7 +36,8 @@ def menu_exams():
 
 def menu_help():
     print("[1] - View Emoticons")
-    print("[2] - About")
+    print("[2] - View Reserved Words")
+    print("[3] - About")
 
 def footer():
     print("")
@@ -94,6 +96,8 @@ def main():
             Message.help_emoticons()
         elif rhelp ==2:
             print("About...")
+        elif rhelp == 3:
+            print_words_reserved() #Printed python reserved words 
 
 
     footer()
