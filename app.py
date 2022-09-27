@@ -35,9 +35,13 @@ def menu_exams():
     return input("Option: ")
 
 def menu_help():
+    Message.line()
+    Message.title("HELP",False)
+    Message.line()
     print("[1] - View Emoticons")
     print("[2] - View Reserved Words")
     print("[3] - About")
+    return input("Option: ")
 
 def footer():
     print("")
@@ -95,9 +99,10 @@ def main():
         if rhelp == 1:
             Message.help_emoticons()
         elif rhelp ==2:
-            print("About...")
-        elif rhelp == 3:
             print_words_reserved() #Printed python reserved words 
+        elif rhelp == 3:
+            print("About...")
+            
 
 
     footer()
